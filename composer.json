@@ -1,0 +1,18 @@
+{
+    "name": "laube/twigytwig",
+    "require": {
+        "symfony/dotenv": "^7.2",
+        "twig/twig": "3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "YoLaub",
+            "email": "johngreta904@gmail.com"
+        }
+    ]
+}

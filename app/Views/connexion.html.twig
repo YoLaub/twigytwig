@@ -1,0 +1,27 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+<h1>{{ titre }}</h1>
+<button id="connexion-invite">Connexion invité</button>
+
+<script>
+document.getElementById('connexion-invite').addEventListener('click', () => {
+    fetch('./app/Controllers/ajax/Ajax_ctrl', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ mode: 'invite' })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = data.redirect;
+        } else {
+            alert('Échec de la connexion');
+        }
+    })
+    .catch(error => console.error(error));
+});
+</script>
+{% endblock %}
