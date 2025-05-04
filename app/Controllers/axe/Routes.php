@@ -13,7 +13,7 @@ class Routes {
     public function __construct() {
         $this->lesActions = [
             'defaut'  => self::DEFAULT_ROUTE,
-            'accueil' => self::DEFAULT_ROUTE,
+            'accueil' => 'accueil_ctrl.php',
             'page404' => self::ERROR_ROUTE,
         ];
     }
